@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/82260814dd.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/path/to/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="About_me.html" />
   </head>
@@ -18,26 +19,32 @@
       <div class="leftside">
         <div class="photo">
           <div class="photo12">
-            <img class="img1" src="profile12.png" alt="img" width="30%" />
+            <img
+              class="img1"
+              src="profile12.png"
+              alt="img"
+              width="30%"
+              style="opacity: 65%"
+            />
           </div>
           <div>
             <p class="name">BIN <span class="name2">IT</span></p>
           </div>
         </div>
         <div class="navigation">
-          <a href="Home">
+          <a href="#Home" target="_self" >
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
           </a>
-          <a href="About_me.html">
+          <a href="#aboutme" target="_self">
             <i class="fa-solid fa-address-card"></i>
             <span>About me</span>
           </a>
-          <a href="Services">
+          <a href="#Projects" target="_self">
             <i class="fa-sharp fa-regular fa-newspaper"></i>
             <span>Projects</span>
           </a>
-          <a href="Contact me">
+          <a href="#Contactme" target="_self"> 
             <i class="fa-solid fa-envelope"></i>
             <span>Contact me</span>
           </a>
@@ -73,8 +80,8 @@
           <br />
         </div>
       </div>
-      <div class="circle"><div class=""></div></div>
-      <div class="rightside">
+      <div class="circle"></div>
+      <div class="rightside" id="Home">
         <div class="circle1"></div>
         <div class="circle2"></div>
         <div class="home1">
@@ -104,43 +111,301 @@
             <img class="pic" src="pngegg.png" 1 alt="img2" width="80%" />
           </div>
         </div>
-        <div class="line"></div>
+        <div class="line" id="aboutme"></div>
         <div class="body2">
           <div class="main">
             <img src="Programmer.webp" class="doge" width="45%" />
             <div class="about">
               <div class="about-title">
-                <h2 class="about0">ABOUT ME</h2>
+                <div class="about0">ABOUT ME</div>
               </div>
               <p class="about1">
                 I'm a Freelancer Front-end Developer with over 3 years of
                 experience.
               </p>
               <p class="about_me">
-                I'm a Freelancer Front-end Developer with over 3 years of experience. I'm from San Francisco. I code and create web elements for amazing people around the world. I like work with new people. New people new Experiences.
+                I'm a Freelancer Front-end Developer with over 3 years of
+                experience. I'm from San Francisco. I code and create web
+                elements for amazing people around the world. I like work with
+                new people. New people new Experiences.
               </p>
-              <div class="projects">
-                <div class="project1">
-                  <div style="font-size: 3rem; color: white; font-family: 'permanent marker',cursive;">5K</div>
-                  <div style="color: white; margin-left: 10%;">Projects completed</div>
+              <div class="projects11">
+                <div class="project12">
+                  <div
+                    style="
+                      font-size: 3rem;
+                      color: white;
+                      font-family: 'permanent marker', cursive;
+                    "
+                  >
+                    5K
+                  </div>
+                  <div style="color: white; margin-left: 10%">
+                    Projects completed
+                  </div>
                 </div>
-                <div class="project2" >
-                  <div style="font-size: 3rem; color: white;font-family: 'permanent marker',cursive;"">3K</div>
-                  <div style="color: white; margin-left: 10%;">Staisfied clients</div>
+                <div class="project22">
+                  <div style="font-size: 3rem; color: white;font-family:
+                  'permanent marker',cursive;"">3K
+                </div>
+                <div style="color: white; margin-left: 10%">
+                  Staisfied clients
                 </div>
               </div>
-              <button class="talk">Let's Talk</button>
             </div>
+            <a href="#Contactme"><button class="talk">Let's Talk</button></a>
           </div>
-          <div class="line"></div>
-          <div class="educations">
-            <div class="about0">EDUCATION & SKILLS</div>
-            <div class="skills">
-              div.
+        </div>
+        <div class="line"></div>
+        <div class="educations">
+          <div class="about0">EDUCATION & SKILLS</div>
+          <div class="skills">
+            <div class="skills1">
+              <div class="lists">
+                <div
+                  class="timeBox"
+                  style="
+                    font-size: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  2021-2023
+                </div>
+                <div style="padding: 0 1rem 0 1rem; font-weight: bold">
+                  Graphic designer
+                </div>
+                <div style="padding: 0 0rem 0 1rem">st. lawrence college</div>
+              </div>
+              <div class="lists">
+                <div
+                  class="timeBox"
+                  style="
+                    font-size: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  2021-2023
+                </div>
+                <div style="padding: 0 0rem 0 1rem; font-weight: bold">
+                  Web developer
+                </div>
+                <div style="padding: 0 0rem 0 1rem">st. lawrence college</div>
+              </div>
+              <div class="lists">
+                <div
+                  class="timeBox"
+                  style="
+                    font-size: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  2021-2023
+                </div>
+                <div style="padding: 0 0rem 0 1rem; font-weight: bold">
+                  Search engine optimization
+                </div>
+                <div style="padding: 0 0rem 0 1rem">st. lawrence college</div>
+              </div>
+            </div>
+            <div class="skills2">
+              <div style="font-size: 2rem">My skills</div>
+              <div>
+                I'm a Freelancer Front-end Developer with over 3 years of
+                experience. I code and create web elements for amazing people
+                around the world. I like work with new people. New people new
+                Experiences.
+              </div>
+              <div class="skillList">
+                <h4>HTLM5</h4>
+                <div class="skill-bar">
+                  <div class="skill-bar-in" style="width: 92%"></div>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="skillList">
+                <h4>Wordpress</h4>
+                <div class="skill-bar">
+                  <div class="skill-bar-in" style="width: 70%"></div>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="skillList">
+                <h4>Javascript</h4>
+                <div class="skill-bar">
+                  <div class="skill-bar-in" style="width: 80%"></div>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="skillList">
+                <h4>Bootstrap</h4>
+                <div class="skill-bar">
+                  <div class="skill-bar-in" style="width: 75%"></div>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="skillList">
+                <h4>CSS</h4>
+                <div class="skill-bar">
+                  <div class="skill-bar-in" style="width: 86%"></div>
+                  <span class="dot"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="line" id="Projects"></div>
+        <div class="about0">Projects</div>
+        <div class="project">
+          <div class="project1">
+            <i class="fa-solid fa-calculator" style="width: 100%"
+              ><span style="margin-left: 5%">Calculator</span></i
+            >
+            <div>
+              The project provides a straightforward and efficient way to build
+              a functional calculator using JavaScript and the eval keyword.. It
+              supports addition, subtraction, multiplication, and division
+              operations, enabling users to perform calculations with ease.
+            </div>
+            <a
+              href="Calculator"
+              style="
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-end;
+              "
+              ><div class="preview">Preview</div></a
+            >
+          </div>
+          <div class="project1">
+            <i class="fa-solid fa-stopwatch" style="width: 100%"
+              ><span style="margin-left: 5%">Stopwatch</span></i
+            >
+            <div>
+              The project provides a simple yet effective way to implement a
+              stopwatch functionality in JavaScript using the Date.now() method
+              to accurately measure time. The stopwatch features start, stop,
+              and reset functionalities, allowing users to control the timing
+              accurately.
+            </div>
+            <a
+              href="Calculator"
+              style="
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-end;
+              "
+              ><div class="preview">Preview</div></a
+            >
+          </div>
+          <div class="project1">
+            <i class="fa-solid fa-gamepad" style="width: 100%"
+              ><span style="margin-left: 5%">Tik Tak Toe</span></i
+            >
+            <div>
+              The project includes logic to check for a winning combination,
+              which occurs when a player successfully forms a line of their
+              symbols horizontally, vertically, or diagonally. When all cells on
+              the board are filled without a winning combination game will be
+              ended as tie.
+            </div>
+            <a
+              href="Calculator"
+              style="
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-end;
+              "
+              ><div class="preview">Preview</div></a
+            >
+          </div>
+          <div class="project1">
+            <i class="fa-solid fa-hands" style="width: 100%"
+              ><span style="margin-left: 5%">Rock scissors paper</span></i
+            >
+            <div>
+              The project includes logic to compare the player's choice with the
+              computer's choice and display the outcome on the screen,
+              indicating whether the player wins, loses, or it's a tie.This
+              JavaScript project offers an enjoyable and interactive way to play
+              game directly in the browser.
+            </div>
+            <a
+              href="Calculator"
+              style="
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-end;
+              "
+              ><div class="preview">Preview</div></a
+            >
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="about0">Get in touch</div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            margin-top: 4%;
+          "
+        >
+          <div class="contact-info">
+            <div style="font-size: 1.9rem">What's your story? Get in touch</div>
+            <div style="margin-top: 7%">
+              Always available for freelancing if the right project comes along,
+              Feel free to contact me.
+            </div>
+            <div class="contact-info-detail">
+              <i class="fa-sharp fa-solid fa-location-dot"
+                ><span style="margin-left: 3%"
+                  >Goldhunda,Kathmandu,Nepal</span
+                ></i
+              >
+              <i class="fa-solid fa-envelope"
+                ><span style="margin-left: 3%">binitcr@gmail.com</span></i
+              >
+              <i class="fa-solid fa-mobile-button"
+                ><span style="margin-left: 3%">+9770000000000</span></i
+              >
+            </div>
+          </div>
+          <a id="Contactme"></a>
+          <div class="contact-box">
+            <div style="font-size: 1.9rem">Say something</div>
+            <div class="contact-box-inputs">
+              <input
+                placeholder="Name *"
+                type="text"
+                class="contact-box-inputs-name"
+              />
+              <input
+                placeholder="Email *"
+                type="text"
+                class="contact-box-inputs-name"
+              />
+              <input placeholder="Subject *" type="text" style="width: 40rem" />
+              <textarea
+                placeholder="Your message*"
+                cols="71"
+                rows="5"
+              ></textarea>
+            </div>
+            <button class="cv">Send message</button>
+          </div>
+        </div>
       </div>
+      <footer style="margin: 0;">&copy; 2023 BinitShrestha. All rights reserved.</footer>
     </div>
   </body>
 </html>
