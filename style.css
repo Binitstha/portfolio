@@ -203,9 +203,6 @@
   background: #95143d;
   border-radius: 50%;
 }
-.body2 {
-  margin-top: 23vh;
-}
 .main {
   font-family: Verdana, sans-serif;
   display: flex;
@@ -225,9 +222,8 @@
 .about0 {
   color: white;
   text-decoration: none;
-  font-size: 300%;
+  font-size: 350%;
   font-family: "Rubic", monospace;
-  letter-spacing: 10%;
 }
 .about_me {
   color: white;
@@ -261,25 +257,6 @@
   transition: 0.4s ease-out;
   cursor: pointer;
 }
-.about-title::before {
-  content: "";
-  width: 6rem;
-  height: 0.1rem;
-  position: absolute;
-  bottom: -8.9rem;
-  background-color: #95143d;
-}
-.about-title::after {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
-  left: 50rem;
-  background: #95143d;
-}
-
 .projects11 {
   display: flex;
   justify-content: space-between;
@@ -304,7 +281,7 @@
   width: 65rem;
   height: 0.5px;
   opacity: 20%;
-  margin: 11% 5% 6% 5%;
+  margin: 14% 5% 6% 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -465,4 +442,29 @@ footer{
   margin-top: 5%;
   color: white;
   padding: 5% 0 0 0;
+}
+.line2{
+  content: "";
+  background: #95143d;
+  height: 10px;
+  width: 9rem;
+}
+.about-title .about0::before{
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  /* left: 54.6rem; */
+  width: 60px;
+  background: #95143d;
+  height: 1px;
+}
+.about-title .about0::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -12.05rem;
+  left: 58rem;
+  background: #95143d;
 }

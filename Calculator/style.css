@@ -1,0 +1,62 @@
+body {
+  font-family: "permanent marker", cursive;
+  font-size: 180%;
+  height: 100vh;
+  background: linear-gradient(60deg, rgb(119, 179, 219), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 5px;
+  height: 33rem;
+  width: 23rem;
+  background: #e3ecf08f;
+  box-shadow: 0 0.1em 0.5em 0;
+  border-radius: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 17rem;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  background: #cae0e3;
+  font-size: 80%;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid black;
+  border-top: 0;
+  cursor: pointer;
+}
+.screen {
+  padding: 3%;
+  margin: 0 0 0 0.6%;
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+  align-items: center;
+  border: 2px solid black;
+  height: 5rem;
+  width: 15.6rem;
+}
+.dots {
+  position: absolute;
+  margin: 0 0 0 3.5%;
+}
+
+.clear:hover {
+  background: #cae0e3;
+  font-size: 80%;
+}
