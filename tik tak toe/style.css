@@ -24,9 +24,9 @@ body{
   background: #abd8bb;
   font-family: "permanent marker", cursive;
   text-align: center;
-  border: 2px solid;
+  /* border: 2px solid; */
   border-radius: 10%;
-  box-shadow: 0 .1rem .5rem 0;
+  box-shadow: 0rem 0rem .8rem 0rem;
   width: 30rem;
   height: 28rem;
 }

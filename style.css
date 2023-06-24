@@ -42,10 +42,12 @@
   justify-content: center;
   letter-spacing: 20px;
   padding-left: 35px;
+  text-decoration: none;
 }
 .name2 {
   font-style: bold;
   color: #95143d;
+  text-decoration: none;
 }
 .navigation {
   margin-left: 13%;
@@ -210,7 +212,7 @@
   align-items: center;
 }
 .doge {
-  margin-top: 6%;
+  margin-top: 9%;
   border-radius: 10%;
   opacity: 75%;
   box-shadow: 0 0 0.5rem 0 white;
@@ -224,6 +226,7 @@
   text-decoration: none;
   font-size: 350%;
   font-family: "Rubic", monospace;
+  text-transform: uppercase;
 }
 .about_me {
   color: white;
@@ -373,10 +376,8 @@
   background: #95143d;
   height: 2.6rem;
   width: 5.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
+  font-size: 1rem;
   margin-top: 2rem;
   border-radius: 2em;
   cursor: pointer;
@@ -446,25 +447,30 @@ footer{
 .line2{
   content: "";
   background: #95143d;
-  height: 10px;
-  width: 9rem;
+  height: 2px;
+  width: 6rem;
+  margin: -3% 0 0 0;
 }
-.about-title .about0::before{
-  content: "";
-  position: absolute;
-  bottom: -100px;
-  /* left: 54.6rem; */
-  width: 60px;
+.dot2{
   background: #95143d;
-  height: 1px;
-}
-.about-title .about0::after{
-  content: "";
-  width: 10px;
-  height: 10px;
+  height: .5rem;
+  width: .5rem;
   border-radius: 50%;
-  position: absolute;
-  bottom: -12.05rem;
-  left: 58rem;
+  margin-top: -0.3rem;
+  margin-left: 6rem;
+}
+.line3{
+  content: "";
   background: #95143d;
+  height: 2px;
+  width: 6rem;
+  margin: -1.5% 0 0 0;
+}
+.dot3{
+  background: #95143d;
+  height: .5rem;
+  width: .5rem;
+  border-radius: 50%;
+  margin-top: -0.3rem;
+  margin-left: 6rem;
 }
