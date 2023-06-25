@@ -474,3 +474,17 @@ footer{
   margin-top: -0.3rem;
   margin-left: 6rem;
 }
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons button{
+  border-radius: 2em;
+  margin: 2% 2% 0 2%;
+  width: 5rem;
+  height: 2rem;
+  font: 2rem;
+  color: #fff;
+  background: #95143d;
+}
