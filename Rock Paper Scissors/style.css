@@ -1,52 +1,60 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    color: white;
+* {
+  margin: 0;
+  padding: 0;
+  /* color: white; */
 }
-.body
-{
-    background: linear-gradient(1deg, black, transparent);
+body {
+  background: linear-gradient(1deg, black, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.body1{
     display: flex;
-    justify-content: center;
-    align-items: center;  
-    flex-wrap: wrap;
-    height: 100vh;
+    justify-self: center;
+    align-items: center;
 }
-#text
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    flex-wrap: wrap;
-    font-size: 200%;
-    width: 100%;
+#text {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
 }
-#btns
-{
+#btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.texts {
+  text-align: center;
+  width: 100%;
+}
+.btn {
+  color: black;
+  font-size: 130%;
+  height: 2em;
+  width: 6rem;
+  margin-top: 5%;
+  border: 0 solid;
+  border-radius: 2em;
+  background: rgb(31 74 116);
+}
+.btn:hover {
+  cursor: pointer;
+  background: rgb(3, 32, 51);
+  border-color: rgb(76, 151, 204);
+  font-size: 120%;
+  cursor: pointer;
+  /* color: slateblue; */
+}
+.display {
+    border:2px solid ;
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.texts
-{
-    text-align: center;
-    width: 100%;
-}
-.btn
-{
-    font-size: 130%;
-    height: 2em;
-    width: 9em;
-    margin: 4% 3% 0 0 ;
-    border: 3px solid gray;
-    border-radius: 2em;
-    background: rgb(31 74 116);
-}
-.btn:hover
-{
-    cursor: pointer;
-    background: rgb(3, 32, 51);
-    transform: scale(1.15);
-    border-color: rgb(76, 151, 204);
+    width: 35rem;
+    border-radius: 10%;
+    box-shadow: 0 .1rem .4rem 0;
 }
