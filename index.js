@@ -29,7 +29,7 @@ const list = [
         projectName: "Rock paper scissors",
         className: "fa-solid fa-hands",
         discription: "The project includes logic to compare the player's choice with the computer's choice and display the outcome on the screen, indicating whether the player wins, loses, or it's a tie.This JavaScript project offers an enjoyable and interactive way to play game directly in the browser.",
-        link: "https://binitstha.github.io/Rock_Scissors-Paper/",
+        link: "https://binitstha.github.io/Rock-Scissors-Paper/",
     },
 ]
 const project = document.querySelector(".project")
