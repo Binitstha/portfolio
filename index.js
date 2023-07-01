@@ -5,7 +5,7 @@ const list = [
         projectName: "Calculator",
         className: "fa-solid fa-calculator",
         discription: "The project provides a straightforward and efficient way to build a functional calculator using JavaScript and the eval keyword. It supports addition, subtraction, multiplication, and division operations, enabling users to perform calculations with ease.",
-        link: "Calculator\index.html",
+        link: "Calculator/index11.html",
     },
     {
         id: 2,
