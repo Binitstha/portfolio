@@ -48,12 +48,12 @@ btns.forEach(function (btn) {
             }
 
         })
-            if (category === "all") {
-                displayDom(list)
-            }
-            else {
-                displayDom(menuCategory)
-            }
+        if (category === "all") {
+            displayDom(list)
+        }
+        else {
+            displayDom(menuCategory)
+        }
         // console.log(menuCategory)
     })
 
@@ -69,4 +69,40 @@ function displayDom(list) {
     })
     displayList = displayList.join("")
     project.innerHTML = displayList
+}
+const mBtn = document.getElementById("mobButton")
+const body = document.getElementById("Home")
+let visible = false
+mBtn.addEventListener("click", () => {
+    const leftSide = document.getElementById("leftSide")
+    if (!visible) {
+        leftSide.style.visibility = "visible"
+        leftSide.style.transition = "all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 0s"
+        leftSide.style.left = "0"
+        visible = true
+    }
+    else if (visible) {
+        leftSide.style.transition = "all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 0s"
+        leftSide.style.left = "-60%"
+        leftSide.style.visibility = "hidden"
+        visible = false
+    }
+})
+body.addEventListener("click", () => {
+    if (visible) {
+        leftSide.style.transition = "all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 0s"
+        leftSide.style.left = "-60%"
+        leftSide.style.visibility = "hidden"
+        visible = false
+    }
+})
+const scrollBtn = document.getElementById("scrollBtn")
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollBtn.style.display = "flex";
+  } else {
+    scrollBtn.style.display = "none";
+  }
 }

@@ -1,0 +1,248 @@
+@media screen and (max-width: 480px) {
+  * {
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    font-family: "permanent marker", sans-serif;
+    scroll-behavior: smooth;
+  }
+  .circle {
+    visibility: hidden;
+  }
+  .circle1 {
+    visibility: hidden;
+  }
+  .circle2 {
+    visibility: hidden;
+  }
+  .rightside {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .leftside {
+    width: 60%;
+    height: 100%;
+    background: black;
+    position: fixed;
+    left: -60%;
+    z-index: 1;
+    visibility: visible;
+    /* transition: ease all 2.35s; */
+    /* -webkit-transition: ease all 0.35s; */
+  }
+  .body1 {
+    background: #141d2b;
+  }
+  .rightside{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 15px;
+  }
+  .mob-header{
+    position: fixed;
+    color: white;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+  .mob_bar{
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+  }
+  .mob-nav-button{
+    height: 35px;
+    width: 35px;
+    background: #141d2b;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+  }
+  .mob-nav-button-expand{
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: white;
+  }
+  .brand-name{
+    font-size: 2rem;
+    letter-spacing: 12px;
+  }
+  .brand-name a{
+    text-decoration: none;
+  }
+  .mob-brand-name1{
+    color: white;
+  }
+  .mob-brand-name2{
+    color: #95143d;
+  }
+  .words{
+    /* margin-left: -30px; */
+    width: 100%;
+  }
+  .words h3 {
+    margin-top: 140px;
+  }
+  .words h1 {
+    font-size: 3.3rem;
+    width: 100%;
+    line-height: 0.5;
+  }
+  .wrapper {
+    margin-top: 10px;
+    display: inline-flex;
+  }
+  .dynamic {
+    margin-left: 15px;
+    line-height: 30px;
+    overflow: hidden;
+  }
+  .dynamic li {
+    list-style: none;
+    color: #95143d;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(3) infinite;
+  }
+  @keyframes slide {
+    100% {
+      top: -86px;
+    }
+  }
+  .dynamic li span::after {
+    overflow: hidden;
+    content: "";
+    position: absolute;
+    left: 0;
+    border-left: 2px solid #95143d;
+    width: 100%;
+    height: 120%;
+    background: #141d2b;
+    animation: typing 2s steps(11) infinite;
+  }
+  @keyframes typing {
+    100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+    }
+  }
+
+  .words p {
+    margin-top: 50px;
+  }
+  .pic{
+    display: none;
+  }
+  .cv{
+    margin-top: 30%;
+  }
+  .line
+  {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+  }
+  .doge{
+    width: 300px;
+    /* display: none; */
+  }
+  .main{
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  .about{
+    padding: 0;
+  }
+  .about0{
+    font-size: 3rem;
+  }
+  .skills{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .skills2{
+    margin-top:8%;
+  }
+  .buttons{
+    margin-top: 3%;
+  }
+  .project{
+    display :flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding: 8px;
+  }
+  .project1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    width: 9rem;
+  }
+  .project1 div{
+    display: none;
+  }
+  .project1 span{
+    font-style: normal;
+    font-size:20px;
+  }
+  .project1 i{
+    font-size: 20px;
+  }
+  .contacts{
+    display: flex;
+    flex-wrap:wrap;
+  }
+  .contact-box{
+    margin-top: 6%;
+    width: 100%;
+    padding: 5%;
+    height: auto;
+  }
+  .contact-info{
+    width: 100%;
+  }
+  .contact-info .whats-your{
+    font-size: 2.8rem;
+  }
+  .available{
+    font-size:25px;
+  }
+  .contact-info-detail{
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+  }
+  .line3{
+    margin-top: .5%;
+  }
+  .line2{
+    margin-top: .2%;
+  }
+  .contact-box-inputs-name{
+    width: 100%;
+  }
+  .contact-box-inputs{
+    width: 100%;
+    column-span: 23;
+  }
+  .contact-box button{
+    margin: 9% 0 5% 0;
+  }
+  textarea{
+    width: 96%;
+    height: 5rem;
+  }
+}
+

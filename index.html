@@ -10,11 +10,29 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
   </head>
 
   <body>
+    <div id="_menu-button" class="mob-header">
+      <div class="mob_bar">
+        <div class="brand-name">
+          <a href="/">
+            <p class="mob-brand-name1">BIN<span class="mob-brand-name2">IT</span></p>
+          </a>
+        </div>
+        <div id="mobButton" class="mob-nav-button">
+          <span class="mob-nav-button-expand"></span>
+          <span class="mob-nav-button-expand"></span>
+          <span class="mob-nav-button-expand"></span>
+      </div>
+      </div>
+    </div>
     <div class="body1">
-      <div class="leftside">
+      <a href="/#Home">
+        <div class="scroll-btn" id="scrollBtn"><i class="fa-solid fa-arrow-up"></i></div>
+      </a>
+      <div id="leftSide" class="leftside">
         <div class="photo">
           <div class="photo12">
             <img
@@ -30,7 +48,7 @@
           </div>
         </div>
         <div class="navigation">
-          <a href="/#Home" target="_self" >
+          <a href="/#Home" target="_self">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
           </a>
@@ -42,7 +60,7 @@
             <i class="fa-sharp fa-regular fa-newspaper"></i>
             <span>Projects</span>
           </a>
-          <a href="/#Contactme" target="_self"> 
+          <a href="/#Contactme" target="_self">
             <i class="fa-solid fa-envelope"></i>
             <span>Contact me</span>
           </a>
@@ -56,10 +74,6 @@
             <i class="fa-brands fa-instagram"></i>
           </a>
           <br />
-          <a href="viber://add?number=9813599563" target="_blank">
-            <i class="fa-brands fa-viber"></i>
-          </a>
-          <br />
           <a href="https://github.com/Binitstha" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
@@ -68,7 +82,6 @@
             <i class="fa-brands fa-whatsapp"></i>
           </a>
           <br />
-
           <a
             href="https://www.linkedin.com/in/binit-shrestha-296310259/"
             target="_blank"
@@ -117,8 +130,7 @@
               <div class="about0">ABOUT ME</div>
               <div class="line2"></div>
               <div class="dot2"></div>
-              <div class="about-title">
-              </div>
+              <div class="about-title"></div>
               <p class="about1">
                 I'm a Freelancer Front-end Developer with over 1 years of
                 experience.
@@ -160,7 +172,7 @@
         <div class="educations">
           <div class="about0">EDUCATION & SKILLS</div>
           <div class="line3"></div>
-              <div class="dot3"></div>
+          <div class="dot3"></div>
           <div class="skills">
             <div class="skills1">
               <div class="lists">
@@ -264,19 +276,18 @@
         <div class="line" id="Projects"></div>
         <div class="about0">Projects</div>
         <div class="line3"></div>
-              <div class="dot3"></div>
-              <div class="buttons">
-                <button class="btn" data-ids="all">All</button>
-                <button class="btn" data-ids="games">Games</button>
-                <button class="btn" data-ids="others">Others</button>
-              </div>
-        <div class="project">
-        </div> 
+        <div class="dot3"></div>
+        <div class="buttons">
+          <button class="btn" data-ids="all">All</button>
+          <button class="btn" data-ids="games">Games</button>
+          <button class="btn" data-ids="others">Others</button>
+        </div>
+        <div class="project"></div>
         <div class="line"></div>
         <div class="about0">Get in touch</div>
         <div class="line3"></div>
-              <div class="dot3"></div>
-        <div
+        <div class="dot3"></div>
+        <div class="contacts"
           style="
             display: flex;
             justify-content: space-between;
@@ -285,8 +296,8 @@
           "
         >
           <div class="contact-info">
-            <div style="font-size: 1.9rem">What's your story? Get in touch</div>
-            <div style="margin-top: 7%">
+            <div class="whats-your">What's your story? Get in touch</div>
+            <div class="available" style="margin-top: 7%">
               Always available for freelancing if the right project comes along,
               Feel free to contact me.
             </div>
@@ -320,8 +331,8 @@
               />
               <input placeholder="Subject *" type="text" style="width: 40rem" />
               <textarea
+              class="textarea"
                 placeholder="Your message*"
-                cols="71"
                 rows="5"
               ></textarea>
             </div>
@@ -329,7 +340,9 @@
           </div>
         </div>
       </div>
-      <footer style="margin: 0;">&copy; 2023 BinitShrestha. All rights reserved.</footer>
+      <footer style="margin: 0">
+        &copy; 2023 BinitShrestha. All rights reserved.
+      </footer>
     </div>
     <script src="index.js"></script>
   </body>
