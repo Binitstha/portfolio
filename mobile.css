@@ -21,26 +21,24 @@
     padding: 0;
   }
   .leftside {
-    width: 60%;
-    height: 100%;
+    width: 70%;
+    height: 100vh;
     background: black;
     position: fixed;
-    left: -60%;
+    left: -70%;
     z-index: 1;
     visibility: visible;
-    /* transition: ease all 2.35s; */
-    /* -webkit-transition: ease all 0.35s; */
   }
   .body1 {
     background: #141d2b;
   }
-  .rightside{
+  .rightside {
     position: absolute;
     left: 0;
     right: 0;
     padding: 15px;
   }
-  .mob-header{
+  .mob-header {
     position: fixed;
     color: white;
     width: 100%;
@@ -49,7 +47,7 @@
     display: flex;
     align-items: center;
   }
-  .mob_bar{
+  .mob_bar {
     background: #000;
     display: flex;
     justify-content: space-between;
@@ -58,7 +56,7 @@
     position: fixed;
     padding: 20px;
   }
-  .mob-nav-button{
+  .mob-nav-button {
     height: 35px;
     width: 35px;
     background: #141d2b;
@@ -67,26 +65,26 @@
     align-items: center;
     display: grid;
   }
-  .mob-nav-button-expand{
+  .mob-nav-button-expand {
     content: "";
     width: 20px;
     height: 1px;
     background: white;
   }
-  .brand-name{
+  .brand-name {
     font-size: 2rem;
     letter-spacing: 12px;
   }
-  .brand-name a{
+  .brand-name a {
     text-decoration: none;
   }
-  .mob-brand-name1{
+  .mob-brand-name1 {
     color: white;
   }
-  .mob-brand-name2{
+  .mob-brand-name2 {
     color: #95143d;
   }
-  .words{
+  .words {
     /* margin-left: -30px; */
     width: 100%;
   }
@@ -136,113 +134,142 @@
       margin: 0 -35px 0 35px;
     }
   }
-
   .words p {
     margin-top: 50px;
   }
-  .pic{
+  .pic {
     display: none;
   }
-  .cv{
+  .cv {
     margin-top: 30%;
   }
-  .line
-  {
+  .line {
     display: flex;
     justify-content: center;
     width: auto;
     align-items: center;
   }
-  .doge{
-    width: 300px;
+  .doge {
+    width: 260px;
     /* display: none; */
   }
-  .main{
+  .main {
     display: flex;
     flex-wrap: wrap-reverse;
   }
-  .about{
-    padding: 0;
+  .about {
+    padding: 5px;
+    width: 100%;
   }
-  .about0{
-    font-size: 3rem;
+  .about1{
+    font-size: 1.4rem;
   }
-  .skills{
+  .projects11 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .project12{
+    font-size: .75rem;
+  }
+  .project22{
+    margin-left: 3.4rem;
+    font-size: .75rem;
+  }
+  .passionate{
+    display: none;
+  }
+  .about0 {
+    font-size: 2.4rem;
+  }
+  .skills {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .skills2{
-    margin-top:8%;
+  .skills1{
+    width: 100%;
+    display: -ms-inline-grid;
+    justify-content: center;
+    align-items: center;
   }
-  .buttons{
+  .skills2 {
+    margin-top: 8%;
+  }
+  .buttons {
     margin-top: 3%;
   }
-  .project{
-    display :flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 8px;
   }
-  .project1{
+  .project1 {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 13rem;
-    width: 9rem;
+    height: 10rem;
+    width: 45%;
   }
-  .project1 div{
+  .project1 div {
     display: none;
   }
-  .project1 span{
+  .project1 span {
     font-style: normal;
-    font-size:20px;
+    font-weight: 100;
+    font-size: 13px;
   }
-  .project1 i{
+  .project1 i {
     font-size: 20px;
   }
-  .contacts{
+  .contacts {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
-  .contact-box{
+  .contact-box {
     margin-top: 6%;
     width: 100%;
     padding: 5%;
     height: auto;
   }
-  .contact-info{
+  .contact-info {
     width: 100%;
   }
-  .contact-info .whats-your{
-    font-size: 2.8rem;
+  .contact-info .whats-your {
+    font-size: 1.82rem;
+    width: 100%;
   }
-  .available{
-    font-size:25px;
+  .available {
+    font-size: 20px;
   }
-  .contact-info-detail{
+  .contact-info-detail {
     flex-wrap: wrap;
-    font-size: 1.1rem;
-  }
-  .line3{
-    margin-top: .5%;
-  }
-  .line2{
-    margin-top: .2%;
-  }
-  .contact-box-inputs-name{
+    font-size: 1rem;
+    font-weight: 1px;
     width: 100%;
   }
-  .contact-box-inputs{
+  .line3 {
+    margin-top: 0.5%;
+  }
+  .line2 {
+    margin-top: 0.2%;
+  }
+  .contact-box-inputs-name {
+    width: 100%;
+  }
+  .contact-box-inputs {
     width: 100%;
     column-span: 23;
   }
-  .contact-box button{
+  .contact-box button {
     margin: 9% 0 5% 0;
   }
-  textarea{
+  textarea {
     width: 96%;
     height: 5rem;
   }
+  .goldhunga{
+    display: none;
+  }
 }
-

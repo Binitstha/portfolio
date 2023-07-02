@@ -83,7 +83,7 @@ mBtn.addEventListener("click", () => {
     }
     else if (visible) {
         leftSide.style.transition = "all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 0s"
-        leftSide.style.left = "-60%"
+        leftSide.style.left = "-70%"
         leftSide.style.visibility = "hidden"
         visible = false
     }
@@ -91,7 +91,7 @@ mBtn.addEventListener("click", () => {
 body.addEventListener("click", () => {
     if (visible) {
         leftSide.style.transition = "all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 0s"
-        leftSide.style.left = "-60%"
+        leftSide.style.left = "-70%"
         leftSide.style.visibility = "hidden"
         visible = false
     }

@@ -512,7 +512,7 @@ footer{
   content: "";
   z-index: 1;
   background: #95143d;
-  display: flex;
+  display: none;
   color: #141d2b;
   justify-content: center;
   align-items: center;
