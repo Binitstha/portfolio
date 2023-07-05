@@ -250,10 +250,17 @@
     width: 100%;
   }
   .line3 {
-    margin-top: 0.5%;
+    bottom: 1px;
   }
   .line2 {
-    margin-top: 0.2%;
+    position: relative;
+    top: 3px;
+  }
+  .dot2{
+    top: -2px;
+  }
+  .dot3{
+    top: -6px;
   }
   .contact-box-inputs-name {
     width: 100%;
