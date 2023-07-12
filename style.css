@@ -410,7 +410,7 @@
   padding: 2.5%;
 }
 .contact-info-detail{
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   margin-top: 9%;
   font-size: 1rem;
