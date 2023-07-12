@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 810px) {
   * {
     line-height: 1.5;
     padding: 0;
@@ -114,7 +114,7 @@
   }
   @keyframes slide {
     100% {
-      top: -86px;
+      top: -90px;
     }
   }
   .dynamic li span::after {
@@ -244,6 +244,8 @@
     font-size: 20px;
   }
   .contact-info-detail {
+    display: grid;
+    margin-top: 0%;
     flex-wrap: wrap;
     font-size: 1rem;
     font-weight: 1px;
