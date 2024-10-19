@@ -1,9 +1,11 @@
-import { sora } from "./fonts/font";
+import Home from "@/components/home";
 
-export default function Home() {
+const Page = () => {
   return (
-    <>
-      <p className={`${sora}`}>Hello sahdhas hu</p>
-    </>
+    <div>
+      <Home />
+    </div>
   );
-}
+};
+
+export default Page;

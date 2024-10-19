@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "../components/navBar";
-import { sora } from "./fonts/font";
+import { sora } from "./fonts/fonts";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -15,9 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sora.className + `antialiased px-32`}>
+      <body className={sora.className + `antialiased`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

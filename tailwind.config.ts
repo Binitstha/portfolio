@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -14,6 +15,16 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        ".text-outline": {
+          "-webkit-text-stroke": "2.3px black",
+          color: "white",
+        },
+      });
+    },
+  ],
 };
+
 export default config;
