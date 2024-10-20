@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <main className=" font-semibold sticky top-0 bg-transparent backdrop-blur-md">
+    <main className=" z-30 font-semibold sticky top-0 bg-transparent backdrop-blur-md">
       <section
         className={
           sora.className + ` flex justify-between items-center h-20 px-32`
@@ -25,7 +25,7 @@ const NavBar = () => {
         </Link>
         <nav>
           <ul className="flex font-semibold justify-center items-center gap-10">
-            <li>About Me</li>
+            <Link href={"#aboutMe"}><li>About Me</li></Link>
             <li>Skills</li>
             <li>Project</li>
             <li>Contact Me</li>
