@@ -14,13 +14,3 @@ const SkillCard = ({
 };
 
 export default SkillCard;
-
-//! NextJs
-//! ReactJs
-//! Redux
-//! MySql
-//! Tailwindcss
-//! Node.JS
-//! Express.Js
-//! firebase
-//! Zod

@@ -17,13 +17,13 @@ const Skills = () => {
   return (
     <>
       <main
-        id="aboutMe"
+        id="skills"
         className={
           sora.className +
           ` h-[90vh] w-full px-32 flex flex-col gap-14 justify-center items-center`
         }
       >
-        <h1 className="text-4xl">
+        <h1 className="text-5xl">
           My <span className={soraBold.className}>skills</span>
         </h1>
         <section className="flex mx-5 flex-wrap justify-between gap-16 items-center ">
