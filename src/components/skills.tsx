@@ -16,7 +16,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 const Skills = () => {
   return (
     <>
-      <main
+      <section
         id="skills"
         className={
           sora.className +
@@ -26,7 +26,7 @@ const Skills = () => {
         <h1 className="text-5xl">
           My <span className={soraBold.className}>skills</span>
         </h1>
-        <section className="flex mx-5 flex-wrap justify-between gap-16 items-center ">
+        <div className="flex mx-5 flex-wrap justify-between gap-16 items-center ">
           <SkillCard skill={"Javascript"} iconName={<FaJs />} />
           <SkillCard skill={"ReactJs"} iconName={<FaReact />} />
           <SkillCard skill={"NextJs"} iconName={<SiNextdotjs />} />
@@ -41,8 +41,8 @@ const Skills = () => {
           <SkillCard skill={"Zod"} iconName={<SiZod />} />
           <SkillCard skill={"Prisma"} iconName={<SiPrisma />} />
           <SkillCard skill={"Git & Github"} iconName={<FaGitAlt />} />
-        </section>
-      </main>
+        </div>
+      </section>
     </>
   );
 };

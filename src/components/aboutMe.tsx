@@ -4,22 +4,22 @@ import Image from "next/image";
 const AboutMe = () => {
   return (
     <>
-      <main
+      <section
         className={
           sora.className +
           ` h-[90vh] w-full px-32 flex gap-14 justify-between items-center`
         }
         id="aboutMe"
       >
-        <section className="flex  flex-[20%] mx-5 flex-wrap justify-center gap-16 items-center ">
+        <div className="flex  flex-[20%] mx-5 flex-wrap justify-center gap-16 items-center ">
           <Image
             src="aboutMe.svg"
             alt="about iamge of Binit shrestha"
             width={350}
             height={350}
           ></Image>
-        </section>
-        <section className=" flex-[50%] flex flex-col gap-10">
+        </div>
+        <div className=" flex-[50%] flex flex-col gap-10">
           <h1 className="text-5xl">
             About <span className={soraBold.className}>Me</span>
           </h1>
@@ -35,12 +35,13 @@ const AboutMe = () => {
             </p>
             <p>
               In the realm of front-end development, I specialize in frameworks
-              such as React and Next.js, utilizing libraries like Redux and Shadcn
-              to build seamless user experiences. I&apos;m also adept at
-              employing TailwindCSS for modern design aesthetics and SASS/SCSS for
-              enhanced styling capabilities. On the back end, I have extensive
-              experience with Node.js and Express, allowing me to create robust
-              server-side applications that handle complex data interactions.
+              such as React and Next.js, utilizing libraries like Redux and
+              Shadcn to build seamless user experiences. I&apos;m also adept at
+              employing TailwindCSS for modern design aesthetics and SASS/SCSS
+              for enhanced styling capabilities. On the back end, I have
+              extensive experience with Node.js and Express, allowing me to
+              create robust server-side applications that handle complex data
+              interactions.
             </p>
             <p>
               My database expertise includes both SQL and NoSQL systems, with
@@ -61,8 +62,8 @@ const AboutMe = () => {
               I undertake.
             </p>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </>
   );
 };

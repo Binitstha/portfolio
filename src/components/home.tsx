@@ -5,13 +5,13 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <main
+    <section
       className={
         sora.className +
         ` h-[90vh] w-full px-32 flex flex-col gap-14 justify-center items-center`
       }
     >
-      <section className="flex justify-between gap-16 items-center ">
+      <div className="flex justify-between gap-16 items-center ">
         <div className="flex-[45%] flex flex-col gap-5">
           <div className="text-5xl leading-relaxed ">
             <div>
@@ -47,8 +47,8 @@ const Home = () => {
             width={600}
           ></Image>
         </div>
-      </section>
-      <section className="flex justify-between w-full items-center h-10">
+      </div>
+      <div className="flex justify-between w-full items-center h-10">
         <div className="flex gap-5">
           <IconBox link="j">
             <FaFacebook className="text-xl" />
@@ -64,8 +64,8 @@ const Home = () => {
           </IconBox>
         </div>
         <div className="border-4 border-black rounded-md w-[40rem] h-1 mx-32"></div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

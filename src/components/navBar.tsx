@@ -1,25 +1,57 @@
+"use client";
+import { useEffect, useState } from "react";
 import { sora } from "@/app/fonts/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
 const NavBar = () => {
-  return (
-    <main className=" z-30 font-semibold sticky top-0 bg-transparent backdrop-blur-md">
-      <section
-        className={
-          sora.className + ` flex justify-between items-center h-20 px-32`
+  const [bgColor, setBgColor] = useState("transparent");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectSection = document.getElementById("project");
+      if (projectSection) {
+        const sectionTop = projectSection.offsetTop;
+        const sectionHeight = projectSection.offsetHeight;
+        const scrollPosition = window.scrollY;
+
+        const isVisible90 = scrollPosition >= sectionTop - sectionHeight * 0.1;
+
+        const isVisible1 = scrollPosition < sectionTop + sectionHeight * 0.01;
+
+        if (isVisible90 && scrollPosition < sectionTop + sectionHeight) {
+          setBgColor("white");
+        } else if (scrollPosition > sectionTop + sectionHeight || isVisible1) {
+          setBgColor("transparent");
         }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <main
+      className={`z-30 font-semibold sticky top-0 backdrop-blur-2xl transition-colors`}
+      style={{ backgroundColor: bgColor }}
+    >
+      <section
+        className={`${sora.className} flex justify-between items-center h-20 px-32`}
       >
         <Link href={"/"}>
-          <div className=" font-bold text-xl flex justify-start items-center">
+          <div className="font-bold text-xl flex justify-start items-center">
             <span>
               <Image
                 src="iconBlack.svg"
-                alt="Binit shrestha logo"
-                width={60}
-                height={60}
-              ></Image>
+                alt="Binit Shrestha logo"
+                width={100}
+                height={100}
+                className="w-[3.8rem] h-[3.8rem]"
+              />
             </span>
             BINIT
           </div>

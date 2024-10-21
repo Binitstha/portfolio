@@ -1,14 +1,18 @@
 import AboutMe from "@/components/aboutMe";
 import Home from "@/components/home";
+import Projects from "@/components/project";
 import Skills from "@/components/skills";
 
 const Page = () => {
   return (
-    <div>
+    <main>
       <Home />
       <AboutMe />
       <Skills />
-    </div>
+      <Projects />
+      <Skills />
+      <Skills />
+    </main>
   );
 };
 
