@@ -16,7 +16,7 @@ const Home = () => {
           <div className="text-5xl leading-relaxed ">
             <div>
               Hello I&apos;am{" "}
-              <span className={soraBold.className}>Binit shrestha.</span>
+              <span className={soraBold.className}>Binit Shrestha.</span>
             </div>
             <div className={soraBold.className}>
               Fullstack{" "}
