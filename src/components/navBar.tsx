@@ -40,7 +40,9 @@ const NavBar = () => {
       style={{ backgroundColor: bgColor }}
     >
       <section
-        className={`${sora.className} flex justify-between items-center h-20 px-32`}
+        className={
+          sora.className + " flex justify-between items-center h-20 px-32"
+        }
       >
         <Link href={"/"}>
           <div className="font-bold text-xl flex justify-start items-center">

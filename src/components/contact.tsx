@@ -1,9 +1,47 @@
+"use client";
+
 import { sora, soraBold, soraLightBold } from "@/app/fonts/fonts";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import IconBox from "./Ui/iconBox";
+import { useForm } from "react-hook-form";
+import { Form } from "@/schema/form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const Contact = () => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<Form>({
+    resolver: zodResolver(Form),
+    defaultValues: {
+      name: "",
+      email: "",
+      websiteName: "",
+      description: "",
+    },
+  });
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    handleSubmit(async (data) => {
+      const response: Response = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log("Email sent successfully.", response);
+      } else {
+        console.log("Error sending email.", response);
+      }
+    })();
+  };
+
   return (
     <>
       <section
@@ -15,58 +53,86 @@ const Contact = () => {
       >
         <div className="flex mx-5 justify-between gap-32 items-center ">
           <div className="flex-[35%] flex flex-col gap-5">
-            <form action="" className="flex flex-col gap-5">
-              <input
-                type="text"
-                id="name"
-                placeholder="Your name"
-                className=" border-2 px-4 py-3 border-neutral-700 rounded-md"
-                required
-              />
-              <input
-                type="text"
-                id="email"
-                placeholder="Email"
-                className=" border-2 px-4 py-3 border-neutral-700 rounded-md"
-                required
-              />
-              <input
-                type="text"
-                id="name"
-                placeholder="Your website(if exist)"
-                className=" border-2 px-4 py-3 border-neutral-700 rounded-md"
-              />
-              <textarea
-                name="description"
-                id="description"
-                placeholder="How can i help you?"
-                className=" border-2 px-4 py-3 h-40 border-neutral-700 resize-none rounded-md"
-              ></textarea>
-            </form>
-            <div className=" flex gap-5 justify-between">
-              <button
-                type="submit"
-                className="before:ease relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-gray-100 before:transition-all before:duration-300 hover:shadow-black hover:before:-rotate-180 hover:text-black"
+            <div className="relative">
+              <form
+                action=""
+                className="flex flex-col gap-5 w-full"
+                onSubmit={handleFormSubmit}
               >
-                <div className="flex justify-center items-center gap-3">
-                  <span className={soraLightBold.className + " relative z-10"}>
-                    Get In Touch
-                  </span>
+                <div>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    className=" border-2 w-full px-4 py-3 border-neutral-700 rounded-md"
+                    {...register("name")}
+                  />
+                  {errors.name && (
+                    <p className="text-red-500 px-1 ">{errors.name.message}</p>
+                  )}
                 </div>
-              </button>
-              <div className="flex gap-5">
-                <IconBox link="j">
-                  <FaFacebook className="text-xl" />
-                </IconBox>
-                <IconBox link="j">
-                  <FaInstagram className="text-xl" />
-                </IconBox>
-                <IconBox link="j">
-                  <FaGithub className="text-xl" />
-                </IconBox>
-                <IconBox link="j">
-                  <FaLinkedin className="text-xl" />
-                </IconBox>
+                <div>
+                  <input
+                    type="text"
+                    id="email"
+                    {...register("email")}
+                    placeholder="Email"
+                    className=" border-2 w-full px-4 py-3 border-neutral-700 rounded-md"
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 px-1 ">{errors.email.message}</p>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="websiteName"
+                    {...register("websiteName")}
+                    placeholder="Your website(if exist)"
+                    className=" border-2 px-4 w-full py-3 border-neutral-700 rounded-md"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    id="description"
+                    {...register("description")}
+                    placeholder="How can i help you?"
+                    className=" border-2 px-4 py-3 h-40 border-neutral-700 resize-none w-full rounded-md"
+                  ></textarea>
+                  {errors.description && (
+                    <p className="text-red-500 px-1 ">
+                      {errors.description.message}
+                    </p>
+                  )}
+                </div>
+                <button
+                  type="submit"
+                  className="before:ease relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-gray-100 before:transition-all before:duration-300 hover:shadow-black hover:before:-rotate-180 hover:text-black"
+                >
+                  <div className="flex justify-center items-center gap-3">
+                    <span
+                      className={soraLightBold.className + " relative z-10"}
+                    >
+                      Get In Touch
+                    </span>
+                  </div>
+                </button>
+              </form>
+              <div className=" absolute right-0 bottom-0 flex gap-5 justify-between">
+                <div className="flex gap-5">
+                  <IconBox link="j">
+                    <FaFacebook className="text-xl" />
+                  </IconBox>
+                  <IconBox link="j">
+                    <FaInstagram className="text-xl" />
+                  </IconBox>
+                  <IconBox link="j">
+                    <FaGithub className="text-xl" />
+                  </IconBox>
+                  <IconBox link="j">
+                    <FaLinkedin className="text-xl" />
+                  </IconBox>
+                </div>
               </div>
             </div>
           </div>
@@ -94,7 +160,7 @@ const Contact = () => {
               <p>
                 Facing a coding crisis? Don&apos;t worry, I&apos;m on the way!
                 🦇💻 Just send a message, and let&apos;s save the day, one line
-                of code at a time! ⚡🦸‍♂️
+                of code at a time! ⚡🦸
               </p>
             </div>
 
