@@ -1,5 +1,5 @@
 import { sora, soraBold } from "@/app/fonts/fonts";
-import SkillCard from "./Ui/skillCard";
+import SkillCard from "./ui/skillCard";
 import { FaGitAlt, FaJs, FaNodeJs, FaReact, FaSass } from "react-icons/fa";
 import {
   SiExpress,

@@ -1,5 +1,5 @@
 import { sora, soraBold } from "@/app/fonts/fonts";
-import ProjectCard from "./Ui/projectCard";
+import ProjectCard from "./ui/projectCard";
 
 const Projects = () => {
   return (

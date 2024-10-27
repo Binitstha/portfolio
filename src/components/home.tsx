@@ -1,6 +1,6 @@
 import { sora, soraBold } from "@/app/fonts/fonts";
 import Image from "next/image";
-import IconBox from "./Ui/iconBox";
+import IconBox from "./ui/iconBox";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {

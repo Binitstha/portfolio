@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "../components/navBar";
 import { sora } from "./fonts/fonts";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
