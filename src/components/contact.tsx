@@ -140,16 +140,16 @@ const Contact = () => {
             </form>
             <div className="absolute right-0 bottom-0 flex gap-5 justify-between">
               <div className="flex gap-5">
-                <IconBox link="j">
+                <IconBox link="https://www.facebook.com/imbinit57">
                   <FaFacebook className="text-xl" />
                 </IconBox>
-                <IconBox link="j">
+                <IconBox link="https://www.instagram.com/binit_shrestha_7">
                   <FaInstagram className="text-xl" />
                 </IconBox>
-                <IconBox link="j">
+                <IconBox link="https://github.com/Binitstha">
                   <FaGithub className="text-xl" />
                 </IconBox>
-                <IconBox link="j">
+                <IconBox link="https://www.linkedin.com/in/binit-shrestha-5b1174278/">
                   <FaLinkedin className="text-xl" />
                 </IconBox>
               </div>

@@ -41,6 +41,7 @@ const Home = () => {
         </div>
         <div className="flex-[45%] pb-3">
           <Image
+          loading="eager"
             src="hero.svg"
             alt="Boy with computer and laptop"
             height={600}
@@ -50,16 +51,16 @@ const Home = () => {
       </div>
       <div className="flex justify-between w-full items-center h-10">
         <div className="flex gap-5">
-          <IconBox link="j">
+          <IconBox link="https://www.facebook.com/imbinit57">
             <FaFacebook className="text-xl" />
           </IconBox>
-          <IconBox link="j">
+          <IconBox link="https://www.instagram.com/binit_shrestha_7">
             <FaInstagram className="text-xl" />
           </IconBox>
-          <IconBox link="j">
+          <IconBox link="https://github.com/Binitstha">
             <FaGithub className="text-xl" />
           </IconBox>
-          <IconBox link="j">
+          <IconBox link="https://www.linkedin.com/in/binit-shrestha-5b1174278/">
             <FaLinkedin className="text-xl" />
           </IconBox>
         </div>

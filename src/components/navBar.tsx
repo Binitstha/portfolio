@@ -41,25 +41,25 @@ const NavBar = () => {
     >
       <section
         className={
-          sora.className + " flex justify-between items-center h-20 px-32"
+          sora.className + " flex justify-between gap-4 items-center h-20 px-2 lg:px-32"
         }
       >
         <Link href={"/"}>
-          <div className="font-bold text-xl flex justify-start items-center">
+          <div className="font-bold lg:text-2xl text-4xl flex justify-start items-center">
             <span>
               <Image
                 src="iconBlack.svg"
                 alt="Binit Shrestha logo"
                 width={100}
                 height={100}
-                className="w-[3.8rem] h-[3.8rem]"
+                className="w-[3.8rem] h-[3.8rem] border-red-500 "
               />
             </span>
-            BINIT
+            <span>BINIT</span>
           </div>
         </Link>
         <nav>
-          <ul className="flex font-semibold justify-center items-center gap-10">
+          <ul className=" hidden lg:flex font-semibold justify-center items-center gap-10">
             <Link href={"#aboutMe"}>
               <li>About Me</li>
             </Link>
@@ -74,11 +74,13 @@ const NavBar = () => {
             </Link>
           </ul>
         </nav>
-        <div>
+        <div className=" hidden lg:block">
           <button className="before:ease relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-gray-100 before:transition-all before:duration-300 hover:shadow-black hover:before:-rotate-180 hover:text-black">
             <div className="flex justify-center items-center gap-3">
-              <span className="relative z-10">Resume</span>
-              <FiDownload />
+              <span className=" flex justify-center items-center gap-3 relative z-10">
+                <p>Resume</p>
+                <FiDownload />
+              </span>
             </div>
           </button>
         </div>

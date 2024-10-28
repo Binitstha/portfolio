@@ -7,21 +7,19 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Binit shrestha's portfolio",
+  description: "Binit Shrestha's portfolio",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={sora.className + `antialiased`}>
-        <NavBar />
-        {children}
-        <Footer />
-        <Toaster />
+      <body className={`${sora.className} antialiased`}>
+          <NavBar />
+          {children}
+          <Footer />
+          <Toaster />
       </body>
     </html>
   );
