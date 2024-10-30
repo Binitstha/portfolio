@@ -65,11 +65,11 @@ const Contact = () => {
   return (
     <section
       id="contactMe"
-      className={`${sora.className} h-[90vh] w-full px-32 flex flex-col gap-14 justify-center items-center`}
+      className={`${sora.className} lg:h-[90vh] my-10 lg:my-0 w-full lg:px-32 flex flex-col gap-14 justify-center items-center`}
     >
-      <div className="flex mx-5 justify-between gap-32 items-center">
-        <div className="flex-[35%] flex flex-col gap-5">
-          <div className="relative">
+      <div className="flex mx-5 justify-between lg:gap-32 gap-10 lg:flex-row flex-col items-center">
+        <div className="lg:flex-[35%] flex flex-col gap-5 w-full">
+          <div className="relative flex lg:block flex-col gap-5">
             <form
               className="flex flex-col gap-5 w-full"
               onSubmit={handleSubmit(onSubmit)}
@@ -138,7 +138,7 @@ const Contact = () => {
                 )}
               </button>
             </form>
-            <div className="absolute right-0 bottom-0 flex gap-5 justify-between">
+            <div className="lg:absolute right-0 bottom-0 flex gap-5 justify-between">
               <div className="flex gap-5">
                 <IconBox link="https://www.facebook.com/imbinit57">
                   <FaFacebook className="text-xl" />

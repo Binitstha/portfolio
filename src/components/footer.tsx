@@ -7,7 +7,7 @@ const Footer = () => {
       <section
         className={
           sora.className +
-          ` text-white bg-black flex justify-between items-center h-20 px-32`
+          ` text-white bg-black flex justify-between items-center h-20 lg:px-32 px-5`
         }
       >
         <div className=" font-bold text-xl gap-2 flex justify-start items-center">

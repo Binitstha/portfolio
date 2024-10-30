@@ -28,8 +28,8 @@ const ProjectCard = ({
     <section
       className={
         reverse
-          ? "flex flex-row-reverse justify-center items-center gap-10"
-          : "flex justify-center items-center gap-16 "
+          ? "flex lg:flex-row-reverse justify-center items-center gap-10 flex-col"
+          : "flex lg:flex-row justify-center items-center gap-16 flex-col"
       }
     >
       <figure className="overflow-hidden flex-[35%] rounded-xl z-[-10px]">
