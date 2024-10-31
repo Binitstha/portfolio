@@ -1,6 +1,6 @@
 import { sora, soraBold } from "@/app/fonts/fonts";
 import Image from "next/image";
-import IconBox from "./Ui/iconBox";
+import IconBox from "./ui/iconBox";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
@@ -8,12 +8,12 @@ const Home = () => {
     <section
       className={
         sora.className +
-        ` h-[90vh] w-full px-32 flex flex-col gap-14 justify-center items-center`
+        ` lg:h-[90vh] h-screen px-5 w-full lg:px-32 flex flex-col gap-14 justify-center items-center`
       }
     >
-      <div className="flex justify-between gap-16 items-center ">
-        <div className="flex-[45%] flex flex-col gap-5">
-          <div className="text-5xl leading-relaxed ">
+      <div className=" flex-col-reverse gap-5  lg:flex-row flex justify-between lg:gap-16 items-center ">
+        <div className="lg:flex-[45%] flex flex-col gap-5">
+          <div className="lg:text-5xl text-3xl leading-relaxed ">
             <div>
               Hello I&apos;am{" "}
               <span className={soraBold.className}>Binit Shrestha.</span>
@@ -21,8 +21,11 @@ const Home = () => {
             <div className={soraBold.className}>
               Fullstack{" "}
               <span
-                className={soraBold.className + " text-outline font-extrabold"}
-                style={{ letterSpacing: "-.22rem", fontSize: "3.4rem" }}
+                className={
+                  soraBold.className +
+                  " text-outline font-extrabold lg:text-[3.4rem] text-[2.3rem]"
+                }
+                style={{ letterSpacing: "-.22rem" }}
               >
                 Developer
               </span>{" "}
@@ -39,8 +42,9 @@ const Home = () => {
             that even your browser can&apos;t break!
           </div>
         </div>
-        <div className="flex-[45%] pb-3">
+        <div className="lg:flex-[45%] pb-3">
           <Image
+            loading="eager"
             src="hero.svg"
             alt="Boy with computer and laptop"
             height={600}
@@ -50,20 +54,20 @@ const Home = () => {
       </div>
       <div className="flex justify-between w-full items-center h-10">
         <div className="flex gap-5">
-          <IconBox link="j">
+          <IconBox link="https://www.facebook.com/imbinit57">
             <FaFacebook className="text-xl" />
           </IconBox>
-          <IconBox link="j">
+          <IconBox link="https://www.instagram.com/binit_shrestha_7">
             <FaInstagram className="text-xl" />
           </IconBox>
-          <IconBox link="j">
+          <IconBox link="https://github.com/Binitstha">
             <FaGithub className="text-xl" />
           </IconBox>
-          <IconBox link="j">
+          <IconBox link="https://www.linkedin.com/in/binit-shrestha-5b1174278/">
             <FaLinkedin className="text-xl" />
           </IconBox>
         </div>
-        <div className="border-4 border-black rounded-md w-[40rem] h-1 mx-32"></div>
+        <div className=" hidden lg:block border-4 border-black rounded-md w-[40rem] h-1 mx-32"></div>
       </div>
     </section>
   );

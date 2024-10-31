@@ -7,11 +7,11 @@ const AboutMe = () => {
       <section
         className={
           sora.className +
-          ` h-[90vh] w-full px-32 flex gap-14 justify-between items-center`
+          ` lg:m-0 mb-7 h-fit lg:h-[90vh] w-full lg:px-32 px-5 flex flex-col lg:flex-row gap-14 justify-between items-center`
         }
         id="aboutMe"
       >
-        <div className="flex  flex-[20%] mx-5 flex-wrap justify-center gap-16 items-center ">
+        <div className="flex flex-[20%] mx-5 flex-wrap justify-center gap-16 items-center ">
           <Image
             src="aboutMe.svg"
             alt="about iamge of Binit shrestha"

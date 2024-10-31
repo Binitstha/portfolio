@@ -1,5 +1,5 @@
 import { sora, soraBold } from "@/app/fonts/fonts";
-import ProjectCard from "./Ui/projectCard";
+import ProjectCard from "./ui/projectCard";
 
 const Projects = () => {
   return (
@@ -8,7 +8,7 @@ const Projects = () => {
         id="project"
         className={
           sora.className +
-          ` h-fit py-20 w-full px-32 bg-black text-white flex flex-col gap-14 justify-center items-center`
+          ` h-fit py-20 w-full px-5 lg:px-32 bg-black text-white flex flex-col gap-14 justify-center items-center`
         }
       >
         <h1 className="text-5xl">

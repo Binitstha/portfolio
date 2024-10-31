@@ -3,23 +3,23 @@ import "./globals.css";
 import NavBar from "../components/navBar";
 import { sora } from "./fonts/fonts";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Binit shrestha's portfolio",
+  description: "Binit Shrestha's portfolio",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={sora.className + `antialiased`}>
-        <NavBar />
-        {children}
-        <Footer />
+      <body className={`${sora.className} antialiased`}>
+          <NavBar />
+          {children}
+          <Footer />
+          <Toaster />
       </body>
     </html>
   );

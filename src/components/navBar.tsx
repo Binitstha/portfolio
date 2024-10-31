@@ -7,6 +7,7 @@ import { FiDownload } from "react-icons/fi";
 
 const NavBar = () => {
   const [bgColor, setBgColor] = useState("transparent");
+  const [hamburger, setHamburger] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +18,6 @@ const NavBar = () => {
         const scrollPosition = window.scrollY;
 
         const isVisible90 = scrollPosition >= sectionTop - sectionHeight * 0.1;
-
         const isVisible1 = scrollPosition < sectionTop + sectionHeight * 0.01;
 
         if (isVisible90 && scrollPosition < sectionTop + sectionHeight) {
@@ -34,18 +34,21 @@ const NavBar = () => {
     };
   }, []);
 
+  const handleHamburger = () => {
+    setHamburger((prev) => !prev);
+  };
+
   return (
     <main
-      className={`z-30 font-semibold sticky top-0 backdrop-blur-2xl transition-colors`}
+      onClick={(e) => !e.target && setHamburger(false)}
+      className={`z-30 font-semibold sticky top-0 backdrop-blur-2xl transition-colors duration-300 ease-in-out`}
       style={{ backgroundColor: bgColor }}
     >
       <section
-        className={
-          sora.className + " flex justify-between items-center h-20 px-32"
-        }
+        className={`${sora.className} flex justify-between gap-4 items-center h-20 px-4 lg:px-32 relative`}
       >
         <Link href={"/"}>
-          <div className="font-bold text-xl flex justify-start items-center">
+          <div className="font-bold lg:text-2xl text-4xl flex justify-start items-center">
             <span>
               <Image
                 src="iconBlack.svg"
@@ -55,30 +58,56 @@ const NavBar = () => {
                 className="w-[3.8rem] h-[3.8rem]"
               />
             </span>
-            BINIT
+            <span>BINIT</span>
           </div>
         </Link>
-        <nav>
-          <ul className="flex font-semibold justify-center items-center gap-10">
-            <Link href={"#aboutMe"}>
-              <li>About Me</li>
-            </Link>
-            <Link href={"#skills"}>
-              <li>Skills</li>
-            </Link>
-            <Link href={"#project"}>
-              <li>Project</li>
-            </Link>
-            <Link href={"#contactMe"}>
-              <li>Contact Me</li>
-            </Link>
+        <div
+          onClick={handleHamburger}
+          className="lg:hidden mr-2 flex flex-col gap-1 p-1 w-fit cursor-pointer"
+        >
+          <span
+            className={`bg-black w-7 h-1 rounded-md transition-transform duration-300 ${
+              hamburger ? "rotate-45 translate-y-2" : ""
+            }`}
+          ></span>
+          <span
+            className={`bg-black w-7 h-1 rounded-md transition-opacity duration-300 ${
+              hamburger ? "opacity-0" : ""
+            }`}
+          ></span>
+          <span
+            className={`bg-black w-7 h-1 rounded-md transition-transform duration-300 ${
+              hamburger ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          ></span>
+        </div>
+        <nav
+          className={`lg:flex flex-col lg:flex-row lg:static absolute right-5 top-16 bg-white lg:bg-inherit shadow-lg lg:shadow-none p-4 lg:p-0 rounded-md lg:rounded-none transition-all duration-300 ease-in-out ${
+            hamburger ? "block opacity-100" : "hidden opacity-0 lg:opacity-100"
+          }`}
+        >
+          <ul className="flex lg:flex-row flex-col font-semibold justify-center items-center lg:gap-10 gap-6">
+            <li>
+              <Link href={"#aboutMe"}>About Me</Link>
+            </li>
+            <li>
+              <Link href={"#skills"}>Skills</Link>
+            </li>
+            <li>
+              <Link href={"#project"}>Project</Link>
+            </li>
+            <li>
+              <Link href={"#contactMe"}>Contact Me</Link>
+            </li>
           </ul>
         </nav>
-        <div>
-          <button className="before:ease relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-gray-100 before:transition-all before:duration-300 hover:shadow-black hover:before:-rotate-180 hover:text-black">
+        <div className="hidden lg:block">
+          <button className="relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl transition-transform duration-300 ease-in-out hover:shadow-black">
             <div className="flex justify-center items-center gap-3">
-              <span className="relative z-10">Resume</span>
-              <FiDownload />
+              <span className="flex justify-center items-center gap-3 relative z-10">
+                <p>Resume</p>
+                <FiDownload />
+              </span>
             </div>
           </button>
         </div>
