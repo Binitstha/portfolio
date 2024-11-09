@@ -16,18 +16,18 @@ const Projects = () => {
         </h1>
         <div className="flex mx-5 flex-wrap justify-between gap-16 items-center ">
           <ProjectCard
-            gitHubLink="https://github.com/Binitstha/Fitness-tracker"
+            gitHubLink="https://github.com/Binitstha/Horizon-cloud"
             projectNumber="01"
-            link="https://fitness-tracker-omega-liard.vercel.app/"
             image="project1.png"
+            link="https://horizon-cloud-gamma.vercel.app/"
             reverse={false}
             title="Horizon Cloud: Streamlined Cloud Management"
             description="Horizon Cloud is a comprehensive web application designed for efficient cloud resource management. Built with Next.js for server-side rendering and seamless navigation, it utilizes Firebase for real-time data management and NextAuth for secure user authentication, including OAuth support for various providers. The application features a modern user interface styled with Tailwind CSS and Material-UI (MUI) components for enhanced usability. Users can easily manage their cloud resources while enjoying a responsive and intuitive experience."
           />
           <ProjectCard
-            gitHubLink="https://github.com/Binitstha/Horizon-cloud"
+            gitHubLink="https://github.com/Binitstha/Fitness-tracker"
+            link="https://fitness-tracker-omega-liard.vercel.app/"
             projectNumber="02"
-            link="https://horizon-cloud-gamma.vercel.app/"
             image="project4.jpg"
             reverse={true}
             description="The Fitness Tracker is a full-stack web application that helps users monitor their fitness journey. Built with React and Next.js for the front end and Node.js and Express for the back end, it uses MySQL with Prisma for data management. The app features responsive styling with Tailwind CSS, state management via React Context, and form handling through React Hook Form and Zod for validation. User authentication is secured with JWT (JSON Web Tokens). Key functionalities include workout logging and progress tracking through visual graphs."

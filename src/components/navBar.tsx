@@ -45,29 +45,32 @@ const NavBar = () => {
       style={{ backgroundColor: bgColor }}
     >
       <section
-        className={`${sora.className} flex justify-between gap-4 items-center h-20 px-4 lg:px-32 relative`}
+        className={`${sora.className} flex justify-between gap-4 items-center h-20 px-4 lg:px-32 relative animate-fadeInDown`}
       >
+        {/* Logo with Bounce Animation */}
         <Link href={"/"}>
-          <div className="font-bold lg:text-2xl text-4xl flex justify-start items-center">
+          <div className="font-bold lg:text-2xl text-4xl flex justify-start items-center animate-bounceIn animate-delay-200">
             <span>
               <Image
                 src="iconBlack.svg"
                 alt="Binit Shrestha logo"
                 width={100}
                 height={100}
-                className="w-[3.8rem] h-[3.8rem]"
+                className="w-[3.8rem] h-[3.8rem] transform transition-all duration-500"
               />
             </span>
             <span>BINIT</span>
           </div>
         </Link>
+
+        {/* Hamburger Icon with Animation */}
         <div
           onClick={handleHamburger}
           className="lg:hidden mr-2 flex flex-col gap-1 p-1 w-fit cursor-pointer"
         >
           <span
-            className={`bg-black w-7 h-1 rounded-md transition-transform duration-300 ${
-              hamburger ? "rotate-45 translate-y-2" : ""
+            className={`bg-black w-7 h-1 rounded-md transition-all duration-300 ease-in-out transform ${
+              hamburger ? "rotate-45 translate-y-2 scale-110" : ""
             }`}
           ></span>
           <span
@@ -76,35 +79,39 @@ const NavBar = () => {
             }`}
           ></span>
           <span
-            className={`bg-black w-7 h-1 rounded-md transition-transform duration-300 ${
-              hamburger ? "-rotate-45 -translate-y-2" : ""
+            className={`bg-black w-7 h-1 rounded-md transition-all duration-300 ease-in-out transform ${
+              hamburger ? "-rotate-45 -translate-y-2 scale-110" : ""
             }`}
           ></span>
         </div>
+
+        {/* Slide-In Navigation Links */}
         <nav
-          className={`lg:flex flex-col lg:flex-row lg:static absolute right-5 top-16 bg-white lg:bg-inherit shadow-lg lg:shadow-none p-4 lg:p-0 rounded-md lg:rounded-none transition-all duration-300 ease-in-out ${
-            hamburger ? "block opacity-100" : "hidden opacity-0 lg:opacity-100"
+          className={`lg:flex flex-col lg:flex-row lg:static absolute right-5 top-16 bg-white lg:bg-inherit shadow-lg lg:shadow-none p-4 lg:p-0 rounded-md lg:rounded-none transition-all duration-500 ease-out transform ${
+            hamburger ? "block opacity-100 animate-slideInUp" : "hidden opacity-0 lg:opacity-100"
           }`}
         >
-          <ul className="flex lg:flex-row flex-col font-semibold justify-center items-center lg:gap-10 gap-6">
-            <li>
+          <ul className="flex lg:flex-row flex-col font-semibold justify-center items-start lg:items-center lg:gap-10 gap-6">
+            <li className="transition-all duration-300 transform hover:scale-110 hover:underline hover:underline-offset-4 hover:text-black animate-delay-200">
               <Link href={"#aboutMe"}>About Me</Link>
             </li>
-            <li>
+            <li className="transition-all duration-300 transform hover:scale-110 hover:underline hover:underline-offset-4 hover:text-black animate-delay-300">
               <Link href={"#skills"}>Skills</Link>
             </li>
-            <li>
+            <li className="transition-all duration-300 transform hover:scale-110 hover:underline hover:underline-offset-4 hover:text-black animate-delay-400">
               <Link href={"#project"}>Project</Link>
             </li>
-            <li>
+            <li className="transition-all duration-300 transform hover:scale-110 hover:underline hover:underline-offset-4 hover:text-black animate-delay-500">
               <Link href={"#contactMe"}>Contact Me</Link>
             </li>
           </ul>
         </nav>
+
+        {/* Resume Button with Interactive Hover Effects */}
         <div className="hidden lg:block">
-          <button className="relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl transition-transform duration-300 ease-in-out hover:shadow-black">
+          <button className="relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl transition-all duration-300 ease-in-out hover:bg-white hover:text-black transform hover:scale-110 hover:shadow-2xl hover:shadow-black">
             <div className="flex justify-center items-center gap-3">
-              <span className="flex justify-center items-center gap-3 relative z-10">
+              <span className="flex justify-center items-center gap-3 relative z-10 ">
                 <p>Resume</p>
                 <FiDownload />
               </span>
