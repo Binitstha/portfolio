@@ -4,7 +4,6 @@ import NavBar from "../components/navBar";
 import { sora } from "./fonts/fonts";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Binit Shrestha | Full Stack Developer Portfolio",
@@ -26,13 +25,13 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="EX3nUOp0cNlXGkhaLTEHHYhKXGqyw8bMycREIo2srww"
+        />
+      </head>
       <body className={`${sora.className} antialiased`}>
-        <Head>
-          <meta
-            name="google-site-verification"
-            content="EX3nUOp0cNlXGkhaLTEHHYhKXGqyw8bMycREIo2srww"
-          />
-        </Head>
         <NavBar />
         {children}
         <Footer />
