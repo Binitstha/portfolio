@@ -13,8 +13,8 @@ const Home = () => {
       }
     >
       <div className="flex-col-reverse gap-5 lg:flex-row flex justify-between lg:gap-16 items-center">
-        <div className="lg:flex-[45%] flex flex-col gap-5 ">
-          <div className="lg:text-5xl text-3xl leading-relaxed">
+        <div className="lg:flex-[45%] flex flex-col gap-8 ">
+          <div className="lg:text-5xl text-3xl flex flex-col gap-5">
             <div className="fade-slide">
               Hello I&apos;m{" "}
               <span className={soraBold.className}>Binit Shrestha.</span>
