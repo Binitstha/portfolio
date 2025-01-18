@@ -88,7 +88,9 @@ const NavBar = () => {
         {/* Slide-In Navigation Links */}
         <nav
           className={`lg:flex flex-col lg:flex-row lg:static absolute right-5 top-16 bg-white lg:bg-inherit shadow-lg lg:shadow-none p-4 lg:p-0 rounded-md lg:rounded-none transition-all duration-500 ease-out transform ${
-            hamburger ? "block opacity-100 animate-slideInUp" : "hidden opacity-0 lg:opacity-100"
+            hamburger
+              ? "block opacity-100 animate-slideInUp"
+              : "hidden opacity-0 lg:opacity-100"
           }`}
         >
           <ul className="flex lg:flex-row flex-col font-semibold justify-center items-start lg:items-center lg:gap-10 gap-6">
@@ -109,14 +111,16 @@ const NavBar = () => {
 
         {/* Resume Button with Interactive Hover Effects */}
         <div className="hidden lg:block">
-          <button className="relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl transition-all duration-300 ease-in-out hover:bg-white hover:text-black transform hover:scale-110 hover:shadow-2xl hover:shadow-black">
-            <div className="flex justify-center items-center gap-3">
-              <span className="flex justify-center items-center gap-3 relative z-10 ">
-                <p>Resume</p>
-                <FiDownload />
-              </span>
-            </div>
-          </button>
+          <Link href="/Resume - Binit shrestha.pdf">
+            <button className="relative bg-black text-white rounded-md h-12 w-40 overflow-hidden border border-black shadow-2xl transition-all duration-300 ease-in-out hover:bg-white hover:text-black transform hover:scale-110 hover:shadow-2xl hover:shadow-black">
+              <div className="flex justify-center items-center gap-3">
+                <span className="flex justify-center items-center gap-3 relative z-10 ">
+                  <p>Resume</p>
+                  <FiDownload />
+                </span>
+              </div>
+            </button>
+          </Link>
         </div>
       </section>
     </main>
